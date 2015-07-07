@@ -11,16 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var boardView: UIView!
-
+    
     @IBOutlet var labelCollection: [UILabel]!
     
     @IBOutlet var resetBtn: UIButton!
+    
+    @IBOutlet weak var Pikachu,Uxie: UISegmentedControl!
+    
     
     let waysToWin = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     
     var board: [String] = []
     
-    var currentTurn = "X"
+    var currentTurn = "Pikachu.png"
+    
     
     var done = false
     
@@ -30,30 +34,32 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         initializeGame()
-       
+        
     }
     
     @IBAction func onTap(sender: AnyObject) {
         for label in labelCollection {
             if(label.text == "" && CGRectContainsPoint(label.frame, sender.locationInView(boardView))) {
-                print(String(label.tag) + " was tapped")
-                board[label.tag] = currentTurn
-                label.text = currentTurn
-                
-                if let winner = checkForWin() {
-                   presentAlert(winner + " has won the game")
-                }
-                
-                if checkForCatsGame() {
-                    presentAlert("It's a draw")
-                }
-                
-                
-                
-                if(currentTurn == "X") {
-                    currentTurn = "O"
-                } else {
-                    currentTurn = "X"
+                if(label.backgroundColor == nil){
+                    print(String(label.tag) + " was tapped")
+                    board[label.tag] = currentTurn
+                    label.backgroundColor = UIColor(patternImage: UIImage(named: "\(currentTurn)")!)
+                    
+                    if let winner = checkForWin() {
+                        presentAlert(winner + " has won the game")
+                    }
+                    
+                    if checkForCatsGame() {
+                        presentAlert("It's a draw")
+                    }
+                    
+                    
+                    
+                    if(currentTurn == "Pikachu.png") {
+                        currentTurn = "Uxie.png"
+                    } else {
+                        currentTurn = "Pikachu.png"
+                    }
                 }
             }
         }
@@ -83,9 +89,9 @@ class ViewController: UIViewController {
         initializeGame()
         
         for label in labelCollection {
-            label.text = ""
+            label.backgroundColor = nil
         }
-        currentTurn = "X"
+        currentTurn = "Pikachu.png"
         
         
     }
@@ -121,6 +127,6 @@ class ViewController: UIViewController {
         }
         return true
     }
-
+    
 }
 

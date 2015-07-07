@@ -10,6 +10,7 @@ import UIKit
 
 class ZerothViewController: UIViewController {
 
+    @IBOutlet var turnControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,11 @@ class ZerothViewController: UIViewController {
         
     }
 
+    @IBAction func turnControl(sender: AnyObject) {
+        
+        let turn = ["Pikachu.png", "Uxie.png"]
+        let currentTurn = turn[turnControl.selectedSegmentIndex]
+    }
    
 }
  

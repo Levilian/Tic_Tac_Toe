@@ -15,6 +15,7 @@
 		1DAB43711B4507A60040EE5A /* TicTactocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB43701B4507A60040EE5A /* TicTactocTests.swift */; };
 		1DAB437C1B4507A60040EE5A /* TicTactocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB437B1B4507A60040EE5A /* TicTactocUITests.swift */; };
 		1DC3E2411B46227F00222D44 /* ZerothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC3E2401B46227F00222D44 /* ZerothViewController.swift */; };
+		1DF01BC41B4B5374007D0886 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01BC31B4B5374007D0886 /* SingleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1DAB437B1B4507A60040EE5A /* TicTactocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTactocUITests.swift; sourceTree = "<group>"; };
 		1DAB437D1B4507A60040EE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DC3E2401B46227F00222D44 /* ZerothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZerothViewController.swift; sourceTree = "<group>"; };
+		1DF01BC31B4B5374007D0886 /* SingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1DAB435B1B4507A60040EE5A /* AppDelegate.swift */,
 				1DAB435D1B4507A60040EE5A /* ViewController.swift */,
 				1DAB435F1B4507A60040EE5A /* Main.storyboard */,
+				1DF01BC31B4B5374007D0886 /* SingleViewController.swift */,
 				1DC3E2401B46227F00222D44 /* ZerothViewController.swift */,
 				1DAB43621B4507A60040EE5A /* Assets.xcassets */,
 				1DAB43641B4507A60040EE5A /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				1DAB435E1B4507A60040EE5A /* ViewController.swift in Sources */,
 				1DC3E2411B46227F00222D44 /* ZerothViewController.swift in Sources */,
+				1DF01BC41B4B5374007D0886 /* SingleViewController.swift in Sources */,
 				1DAB435C1B4507A60040EE5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
